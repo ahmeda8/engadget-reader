@@ -40,15 +40,16 @@
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="254" />
-                                                <RowDefinition />
-                                                <RowDefinition />
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="450"/>
                                             </Grid.ColumnDefinitions>
                                             <Image Grid.Row="0" Grid.Column="0" Source="{Binding Image}" Stretch="Fill"/>
-                                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Title}" Foreground="{StaticResource TextColor}" FontSize="20" TextWrapping="Wrap" FontWeight="SemiBold"/>
-                                            <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Date}" Foreground="{StaticResource TextColorSubtle}" FontWeight="SemiBold"/>
+                                            <Rectangle Grid.Row="0" Grid.Column="0" Fill="#D8000000" Margin="0,200,0,0"/>
+                                            <TextBlock Grid.Row="0" Margin="0,200,0,0" Grid.Column="0" Text="{Binding Title}" Foreground="{StaticResource TextColor}" FontSize="20" TextWrapping="Wrap" FontWeight="SemiBold" TextTrimming="WordEllipsis"/>
+                                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Date}" Foreground="{StaticResource TextColorSubtle}" FontWeight="SemiBold"/>
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
